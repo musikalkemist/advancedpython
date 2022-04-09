@@ -5,9 +5,9 @@ class Animal(ABC):
 
     @property
     @abstractmethod
-    def number_of_legs(self):
+    def number_of_legs(self) -> int:
         pass
 
     @abstractmethod
-    def make_sound(self):
+    def make_sound(self) -> None:
         pass

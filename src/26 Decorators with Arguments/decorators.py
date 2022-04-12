@@ -17,9 +17,9 @@ def hello(name: str):
     print(f"Hello {name}")
 
 
-name = hello("Josh")
-print()
-print(name)
+# name = hello("Josh")
+# print()
+# print(name)
 
 
 def timing(func):
@@ -37,11 +37,12 @@ def squares(stop_number):
     return [x**2 for x in range(stop_number)]
 
 
-l_squares = squares(1000000)
-print(l_squares[:10])
+# l_squares = squares(1000000)
+# print(l_squares[:10])
 
 
 ### decorators with arguments ###
+
 def wait(seconds: int):
     def wait_decorator(func):
         def wrapper(*args, **kwargs):
@@ -53,6 +54,7 @@ def wait(seconds: int):
 
 
 @wait(3)
+@greetings
 def hello(name: str):
     print(f"Hello {name}")
 

@@ -1,5 +1,3 @@
-from typing import List, Dict
-
 from pydantic import BaseModel, validator
 
 from src.project.errors import CurrencyError

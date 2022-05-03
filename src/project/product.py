@@ -1,3 +1,5 @@
+from typing import Tuple
+
 from pydantic import BaseModel, validator
 
 from src.project.errors import CurrencyError
@@ -15,14 +17,14 @@ class Product(BaseModel):
 
     @validator("currency")
     @classmethod
-    def check_currence_is_supported(cls, value: str, values: dict) -> str:
+    def check_currency_is_supported(cls, value: str, values: dict) -> str:
         if value not in supported_currencies:
             msg = f"Currency '{value}' isn't supported in product '{values['name']}'."
-            raise CurrencyError(msg)
+            raise CurrencyError(value, msg)
         return value
 
-    def to_tuple(self):
-        """Convert Product object to a list of the type:
+    def to_tuple(self) -> Tuple:
+        """Convert Product object to a tuple of the type:
         (name, currency, price).
         """
         return (self.name, self.currency, self.price)

@@ -1,6 +1,5 @@
 import math
 import sqlite3
-import threading
 import os
 from pathlib import Path
 

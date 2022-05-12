@@ -35,7 +35,8 @@ class CurrencyConverter(Transform):
         currency_converted_product_params = {
             "name": product.name,
             "currency": self.target_currency,
-            "price": self._convert_price(product)}
+            "price": self._convert_price(product)
+        }
         return Product(**currency_converted_product_params)
 
     def _convert_price(self, product: Product) -> float:

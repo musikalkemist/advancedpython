@@ -39,8 +39,8 @@ class EmployeeDTO(BaseModel):
         return value
 
     @classmethod
-    def from_dict(self, args_dict: dict) -> EmployeeDTO:
-        return EmployeeDTO(**args_dict)
+    def from_dict(cls, args_dict: dict) -> EmployeeDTO:
+        return cls(**args_dict)
 
 
 if __name__ == "__main__":

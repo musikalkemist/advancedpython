@@ -24,5 +24,5 @@ class PowerSum:
 
 if __name__ == "__main__":
     power_sum = PowerSum(2, 0, 3)
-    for sum in power_sum:
-        print(sum)
+    for sum_ in power_sum:
+        print(sum_)
